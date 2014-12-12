@@ -1,0 +1,23 @@
+<ion-view view-title="Cadastro">
+  <ion-content>
+      <div class="list">
+      	<label class="item item-input tem-stacked-label">
+          <span class="input-label">Nome</span>
+          <input type="text" required="required" ng-model="usuario.nome">
+        </label>
+        <label class="item item-input tem-stacked-label">
+          <span class="input-label">Email</span>
+          <input type="text" required="required" ng-model="usuario.email">
+        </label>
+        <label class="item item-input tem-stacked-label">
+          <span class="input-label">Senha</span>
+          <input type="password" required="required" ng-model="usuario.senha">
+        </label>
+        <label class="item item-input tem-stacked-label">
+          <span class="input-label">Confirmar Senha</span>
+          <input type="password" required="required" ng-model="usuario.pwdConfirm">
+        </label>
+      </div>
+      <button class="button button-block button-positive" ng-click="salvar()">Cadastrar</button>
+  </ion-content>
+</ion-view>

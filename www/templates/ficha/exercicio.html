@@ -1,0 +1,50 @@
+<ion-view view-title="Incluir Exercicio">
+  <ion-content>
+      
+  	<div class="list">
+  		  <label class="item" ng-show="isEdicao">{{exercicio.nome}}</label>
+		  <label ng-show="!isEdicao" class="item item-input item-select">
+		    <div class="input-label">
+		      Exercicio:
+		    </div>
+		    <select ng-model="exercicio.nome" required="required">
+		      <option selected="selected" value="SELECIONE">SELECIONE</option>
+		      <option value="SUPINO INCLINADO COM HALTERES">SUPINO INCLINADO COM HALTERES</option>
+		      <option value="SUPINO COM HALTERES">SUPINO COM HALTERES</option>
+		      <option value="SUPINO EM MAQUINA">SUPINO EM MAQUINA</option>
+		      <option value="SUPINO INCLINADO COM BARRA">SUPINO INCLINADO COM BARRA</option>
+		    </select>
+		  </label>
+		  <div class="range">
+			   <div class="input-label">
+			      Peso(kg):
+			  </div>
+			  <i class="icon ion-minus"></i>
+			  <input type="range" name="carga" ng-model="exercicio.carga" min="0" max="100" value="0"></input>
+			  <i class="icon ion-plus"></i>
+			  <div>&nbsp;&nbsp;&nbsp;{{exercicio.carga}}</div>
+		  </div>
+		  <div class="range">
+			   <div class="input-label">
+			      Repeti&ccedil;&otilde;es:
+			  </div>
+			  <i class="icon ion-minus"></i>
+			  <input type="range" name="carga" ng-model="exercicio.repeticoes" min="0" max="100" value="0"></input>
+			  <i class="icon ion-plus"></i>
+			  <div>&nbsp;&nbsp;&nbsp;{{exercicio.repeticoes}}</div>
+		  </div>
+		  <div class="range">
+			   <div class="input-label">
+			      Intervalo(seg):
+			  </div>
+			  <i class="icon ion-minus"></i>
+			  <input type="range" name="intervalo" ng-model="exercicio.intervalo" min="0" max="60" value="0"></input>
+			  <i class="icon ion-plus"></i>
+			  <div>&nbsp;&nbsp;&nbsp;{{exercicio.intervalo}}</div>
+		  </div>
+	</div>
+    <button class="button button-block button-positive" ng-click="salvar()">Confirmar</button>
+    <button class="button button-block button-positive" ng-show="isEdicao" ng-click="voltar()">Voltar</button>
+    
+  </ion-content>
+</ion-view>

@@ -1,0 +1,16 @@
+<ion-view view-title="Login">
+  <ion-content>
+      <div class="list">
+        <label class="item item-input tem-stacked-label">
+          <span class="input-label">Email</span>
+          <input type="text" required="required" ng-model="usuario.email">
+        </label>
+        <label class="item item-input tem-stacked-label">
+          <span class="input-label">Senha</span>
+          <input type="password" required="required" ng-model="usuario.senha">
+        </label>
+      </div>
+      <button class="button button-block button-positive" ng-click="doLogin()">Log in</button>
+      <button class="button button-block button-positive" ng-click="doCadastrar()">Cadastre-se</button>
+  </ion-content>
+</ion-view>
